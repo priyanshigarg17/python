@@ -168,13 +168,13 @@ output:-[2, 3, 4]
 '''
 output: false
 '''
-# num = [1, 2, 3, 2, 4, 5, 1, 6]
-# for i in range(0, len(num)):
-#     for j in range(i+1, len(num)):
-#         if(num[j]==num[i]):
-#             num.remove(num[j])
-#             break
-# print(num)
+num = [1, 2, 3, 2, 4, 5, 1, 6]
+for i in range(0, len(num)):
+    for j in range(i+1, len(num)):
+        if(num[j]==num[i]):
+            num.pop(num[j])
+            break
+print(num)
 
 '''
 [2, 3, 2, 4, 5, 1, 6]
@@ -302,3 +302,4 @@ output={'salary':85}
 # print(mydictionary)
 
 # {'h': 1, 'e': 1, 'y': 1, 'v': 1, 'i': 1, 't': 1}
+
