@@ -82,9 +82,39 @@ output={'salary':85}
 
 # {'h': 1, 'e': 1, 'y': 1, 'v': 1, 'i': 1, 't': 1}
 
-s='regex software'
-regexsoftware={}
-for i in s:
-    if i in "aeiou":
-        regexsoftware[i]=regexsoftware.get(i, 0)+1
-print(regexsoftware)
+# #count vowel
+# s='regex software'
+# regexsoftware={}
+# for i in s:
+#     if i in "aeiou":
+#         regexsoftware[i]=regexsoftware.get(i, 0)+1
+# print(regexsoftware)
+
+
+'''second approach'''
+
+# data="helloe"
+# mydictionary={}
+
+# for char in data:
+#   if char in "aeiou":
+#     if char in mydictionary:
+#       mydictionary[char]+=1
+#     else:
+#       mydictionary[char]=1
+
+#     print(char, mydictionary)
+
+'''
+e {'e': 1}
+o {'e': 1, 'o': 1}
+e {'e': 2, 'o': 1}
+'''
+
+# #dictionary comprehension
+# x={i:1 for i in "hey"}
+# print(x)
+
+#list comprehension
+x=[i+5 for i in [10, 20, 30]]
+print(x)

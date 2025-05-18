@@ -168,16 +168,16 @@ output:-[2, 3, 4]
 '''
 output: false
 '''
-num = [1, 2, 3, 2, 4, 5, 1, 6]
-for i in range(0, len(num)):
-    for j in range(i+1, len(num)):
-        if(num[j]==num[i]):
-            num.pop(num[j])
-            break
-print(num)
+# num = [1, 2, 3, 2, 4, 5, 1, 6]
+# for i in range(0, len(num)):
+#     for j in range(i+1, len(num)):
+#         if(num[j]==num[i]):
+#             num.pop(j)
+#             break
+# print(num)
 
 '''
-[2, 3, 2, 4, 5, 1, 6]
+[1, 2, 3, 4, 5, 6]
 '''
 
 # list1 = [1, 2, 3, 4, 5]
@@ -212,6 +212,10 @@ strawberry
 #                 print(n[i], n[j], n[k])
 #                 break
 
+
+'''
+Tuples
+'''
 # mytuple=(10, 20, "abc", 10)
 # mytuple.count(10)
 # print(mytuple.count(10))
@@ -219,87 +223,63 @@ strawberry
 # mytuple=(10, 20, "abc", 10)
 # print(mytuple.index("abc"))
 
-# dictionary
-# no index position
-# time complexity for insert/access: O(1)
-# mutuable datatype
-# key is unique identifier
-#value: are like the data
-# element store in form of key and value pair
-
-''''
-mydictionary={10:"aman", 11:"aditya"}
-mydictionary[12]='naina' #to insert the new
-mydictionary[10]="ujjwal" #to updata the value
-x=mydictionary.pop(11) #mydictionary.pop(11) #to delete
-print(mydictionary)
-print(x)
-
-mydictionary={10:"aman", 11:"aditya"}
-mydictionary.update({10:"naina", 11:"aditya"}) #to update using update fun
-print(mydictionary)
-
-mydictionary={10:"aman", 11:"aditya"}
-print(mydictionary.keys())
-print(mydictionary.values())
-print(mydictionary.items())
-
-
-mydictionary={10:"aman", 11:"aditya"}
-for i in mydictionary:
-    print(i, mydictionary[i])
-
-mydictionary={10:"aman", 11:"aditya"}
-for i in mydictionary.keys():
-    print(i, mydictionary[i])
-
-mydictionary={10:"aman", 11:"aditya"}
-for i in mydictionary.items():
-    print(i)
-
-mydictionary={10:"aman", 11:"aditya"}
-for i in mydictionary.values():
-    print(i)
-'''
-# s='hello'
-# mydictionary={}
-# count=0
-# for i in s:
-#     count+=1
-# mydictionary["total"]=count
-# print(mydictionary)
-
-# output:
-# {'total': 5}
-
-# s='hello'
-# count=0
-# mydictionary={"total":0}
-# for i in s:
-#     mydictionary["total"]=mydictionary["total"]+1
-# print(mydictionary)
-# {'total': 5}
 
 '''
-mydictionary={"salary:80"}
-mydictionary["salary"]=mydictionary["salary"]+5
-print(mydictionary)
+#print missing value
+n=[1, 2, 3, 4, 6]
+for i in range(1, len(n)+1):
+    if i not in n:
+        print(i)
+        break
+output=5
+'''
 
-output={'salary':85}
+#print unique values
+# n = [4, 5, 1, 2, 0, 4, 5, 2]
+# for i in range(0, len(n)):
+#     count=0
+#     for j in range(0, len(n)):
+#         if n[i]==n[j]:
+#             count+=1
+#     if count==1:
+#         print(n[i])
+#         break
+
+#     output=1
 
 '''
-# s="hleidfejr"
-# mydictionary={"vowels":0}
-# for i in s:
-#     if i in "aeiou":
-#         mydictionary["vowels"]=mydictionary["vowels"]+1
-# print(mydictionary)
+n=[0, 1, 0, 3, 12]
+result=[]
+for i in range(0, len(n)):
+    if n[i]!=0:
+        result.append(n[i])
+for i in range(len(n)):
+    if n[i]==0:
+        result.append(n[i])
+print(result)
 
-# s="heyvit"
-# mydictionary={}
-# for i in s:
-#     mydictionary[i]=1
-# print(mydictionary)
+output=[1, 3, 12, 0, 0]
 
-# {'h': 1, 'e': 1, 'y': 1, 'v': 1, 'i': 1, 't': 1}
+'''
+# n = [1, 3, 2, 6, 5, 8, 7]
+# for i in range(len(n)-1):
+#     if n[i]<n[i+1]:
+#         print(n[i+1], end=' ')
+
+# output=3 6 8 
+
+#integer into roman
+nested_list = [1, [2, 3], [4, [5, 6], 7], 8]
+Flattened_list= []
+
+for i in range(0, len(nested_list)):
+    if nested_list[i]==[ ]:
+        Flattened_list.append(nested_list[i])
+        print(Flattened_list)
+
+
+
+
+
+
 
