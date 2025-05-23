@@ -29,17 +29,43 @@
 #             print(count)
 
 
-str="hello hey computer science new"
-k=4
-for i in str:
-    if len(i)>k:
-        print(k, end="")
+# str="hello hey computer science new"
+# k=4
+# for i in str:
+#     if len(i)>k:
+#         print(k, end="")
         
 
-str="ababa"
-mydict={}
-for i in str:
-    print(i)
-    if len(i) > 2:
-        mydict.append.i()
-        print(mydict)
+# s="ababa"
+# mydict={}
+# for i in range(0, 6):
+#     data=""
+#     for j in range(i, len(s)):
+#         data=data+s[j]
+#         print(data)
+#         if data in mydict:
+#             mydict[data]+=1
+#         else:
+#             mydict[data]=1
+# print(mydict)
+
+'''{'a': 3, 'ab': 2, 'aba': 2, 'abab': 1, 'ababa': 1, 'b': 2, 'ba': 2, 'bab': 1, 'baba': 1} '''
+
+for i in range(1, 6):
+    for j in range(1, 6-i):
+        print(" ", end=" ")
+    for j in range(1, 2*i):
+        print(j, end=" ")
+    print()
+
+
+
+
+
+# str="huhii"
+# total=0
+# middle=0
+# for i in str:
+#     total+=1
+#     middle=total//2
+# print(total, i, middle)

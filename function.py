@@ -283,11 +283,80 @@ hello'''
 
 
 #list type
-def func(x):
-    print("x=>", id(x), id(mylist))
-    x.append(90)
-    print("x new=>", id(x))
+# def func(x):
+#     print("x=>", id(x), id(mylist))
+#     x.append(90)
+#     print("x new=>", id(x))
 
-mylist=[10, 20]
-func(mylist)
-print("new=>", mylist)
+# mylist=[10, 20]
+# func(mylist)
+# print("new=>", mylist)
+
+'''x=> 2001518188800 2001518188800
+x new=> 2001518188800
+new=> [10, 20, 90]'''
+
+
+#lambda 
+
+'''
+function
+anonymous funtion
+no name
+oneline-inline function
+lambda parameter: expression
+
+'''
+# exampple
+# def sum1(a, b):
+#     return a+b
+
+# x=sum1(10, 12)
+# print(x)
+
+# above through lambda
+'''out=lambda a,b: a+b
+print(out(10, 20))'''
+
+'''# map or filter are two of the most used high order functions'''
+# high order functions => takes another function as argument
+# use to reuse the code again and again over program
+# iterable (jiske uppr hum loop chlate hai wo iterable hota h)
+# it will process data as per your requirement
+
+'''syntax variable = map( function, iterable)
+print(next(variable))'''
+
+# x=map(len, ["hey", "hello"])
+# print( next(x))
+# print( next(x))
+
+# output= 
+# 3
+# 5
+
+"""next esa function h jo apke kaam ko trigger krta hai or har ek k liye use alg alg hoga
+"""
+
+# def square(num):
+#     return num**2
+
+# x=map( square, [10, 20, 30])
+# # print ( next(x) )
+# #output 100
+# print( list(x) )
+# # output [100, 400, 900]
+
+'''using lambda'''
+# x= map( lambda num:num**2, [10, 20, 30])
+# print( list(x))
+# # # output [100, 400, 900]
+
+"""check even number"""
+x= map( lambda num:num%2==0, [10, 20, 30, 11, 18, 19])
+print( list(x))
+
+'''output=[True, True, True]'''
+
+x= filter( lambda num:num%2==0, [10, 20, 30, 11, 18, 19])
+print( list(x))
