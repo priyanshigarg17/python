@@ -428,23 +428,48 @@ operator overloading- below
 
 
 '''question for class method'''
-class Dollar:
-    def __init__(self, amount):
-        self.amount=amount
+# class Dollar:
+#     def __init__(self, amount):
+#         self.amount=amount
     
 
-    @classmethod
-    def __repr__(cls): 
-      return f"Amount in {cls} class"
+#     @classmethod
+#     def __repr__(cls): 
+#       return f"Amount in {cls} class"
 
-c1= Dollar(10)
-print(c1)
+# c1= Dollar(10)
+# print(c1)
 
-# output'''Amount is 10'''
+# # output'''Amount is 10'''
 
-class IndianRupee(Dollar):
-    def __init__(self, amount):
-        super().__init__(amount)
+# class IndianRupee(Dollar):
+#     def __init__(self, amount):
+#         super().__init__(amount)
 
-ind1 =IndianRupee(50)
-print(ind1)
+# ind1 =IndianRupee(50)
+# print(ind1)
+
+
+# class A:
+#     def info(self):
+#         print("hey info from A class")
+
+#     def info(self, x):
+#         print("hey this is from second class")
+
+# a1=A()
+# a1.info()
+
+'''encapsulation'''
+
+#private and protected (only for showing things but there is nothing called as private and protected)
+class users:
+    _amount=100 #protected
+    __salary= 2000 #private
+
+    #by writing _class name then we can access both at any where
+class employee(users):
+    id=10
+
+e1=employee()
+print(e1._users__salary)

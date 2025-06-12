@@ -115,6 +115,16 @@ e {'e': 2, 'o': 1}
 # x={i:1 for i in "hey"}
 # print(x)
 
+'''output={'h': 1, 'e': 1, 'y': 1}'''
+
 #list comprehension
-x=[i+5 for i in [10, 20, 30]]
-print(x)
+# x=[i+5 for i in [10, 20, 30]]
+# print(x)
+
+# '''output=[15, 25, 35]'''
+
+
+dict={"a":2, "b":3}
+dict2={"c":4, "d":5}
+dict.update(dict2)
+print(dict)

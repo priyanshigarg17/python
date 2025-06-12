@@ -70,6 +70,7 @@
 #         max=numbers[i]
 # print("maximum number is ", max)
 
+
 '''
 output=maximum number is  99
 '''
@@ -212,6 +213,11 @@ strawberry
 #                 print(n[i], n[j], n[k])
 #                 break
 
+'''output= '''
+
+
+
+
 
 '''
 Tuples
@@ -269,17 +275,48 @@ output=[1, 3, 12, 0, 0]
 # output=3 6 8 
 
 #integer into roman
-nested_list = [1, [2, 3], [4, [5, 6], 7], 8]
-Flattened_list= []
+# nested_list = [1, [2, 3], [4, [5, 6], 7], 8]
+# Flattened_list= []
 
-for i in range(0, len(nested_list)):
-    if nested_list[i]==[ ]:
-        Flattened_list.append(nested_list[i])
-        print(Flattened_list)
-
-
+# for i in range(0, len(nested_list)):
+#     if nested_list[i]==[ ]:
+#         Flattened_list.append(nested_list[i])
+#         print(Flattened_list)
 
 
 
 
+# n = [-1, 0, 1, 2, -1, -4]
+# for i in range(0, len(n)):
+#     for j in range(i+1, len(n)):
+#         for k in range(i+2, len(n)):
+#             if(n[i]+n[j]+n[k]==0):
+#                 print(n[i], n[j], n[k])
+#                 break
 
+# '''output= '''
+
+
+
+# list=[3,4,5,3,6,7,3,5]
+# target=5
+# for index, i in enumerate(list):
+#    if i==target:
+#       print("the first index position of 5 is", index)
+#       break
+# else:
+#     print("not found")
+
+x = 345543
+original = x
+reverse = 0
+
+while x > 0:
+    digit = x % 10
+    reverse = reverse * 10 + digit
+    x = x // 10
+
+if original == reverse:
+    print("true")
+else:
+    print("false")
