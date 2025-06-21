@@ -6,7 +6,6 @@
 #     print("error is being handled")
 
 
-
 # try:
 #     print("hey")
 #     "abc"+10
@@ -97,6 +96,38 @@ else block"""
 # assert x!=10, "hey"
 
 
-f= open("vij.txt", "r")
-x=f.read()
-raise FileNotFoundError
+"heyhelloo"
+# i need to get the character with the least frequency
+
+str="heyhelloo"
+low_freq=[]
+for i in str:
+        count=0
+        for j in str:
+            if i==j:
+                count+=1
+        if count==1:
+            low_freq.append(i)
+
+print(low_freq)
+
+# str = "heyhelloo"
+# frequency = {}
+# for i in str:
+#     if i in frequency:
+#         frequency[i]+=1
+#     else:
+#         frequency[i]=1
+
+# min = frequency[i]
+# for i,j in frequency.items():
+#     if j < min:
+#         min = frequency[i]
+# print(min)
+
+# str="regex software tech company"
+# #check company is a substring or not 
+# for i in str.split():
+#     if i=="company":
+#         print("true")
+

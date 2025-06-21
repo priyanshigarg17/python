@@ -7,7 +7,6 @@
 # sd={i:d[i] for i in mykeys}
 # print(sd)
 
-
 #next question
 # d = {2: 56, 1: 2, 5: 12, 4: 24}
 # mylist=[i for i in d]
@@ -109,15 +108,28 @@
 
 # print("Minimum sale is by:", min_key, "with value:", min_value)
 
-points = {'p1': 10, 'p2': -5, 'p3': 0, 'p4': -1}
-# Output: {'p1': 10, 'p3': 0}
-new={}
-for i, j in points.items():
-    if j>=0:
-        print(i)
-        new[i]=j
-print(new)
+# points = {'p1': 10, 'p2': -5, 'p3': 0, 'p4': -1}
+# # Output: {'p1': 10, 'p3': 0}
+# new={}
+# for i, j in points.items():
+#     if j>=0:
+#         print(i)
+#         new[i]=j
+# print(new)
     
     
+# s = "hi hello user hi"
+# s1 = s.split(" ")
+# s2 = []
+# for i in s1:
+# 	if i not in s2:
+# 		s2.append(i)
+# result = " ".join(s2)
+# print(result)
 
-
+list=[23, 45, 67, 78, 33]
+max=list[0]
+for i in list:
+      if i>max:
+           max=i
+print("max number is ", max)

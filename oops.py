@@ -463,13 +463,127 @@ operator overloading- below
 '''encapsulation'''
 
 #private and protected (only for showing things but there is nothing called as private and protected)
-class users:
-    _amount=100 #protected
-    __salary= 2000 #private
+# class users:
+#     _amount = 100 #protected
+#     __salary = 2000 #private
 
-    #by writing _class name then we can access both at any where
-class employee(users):
-    id=10
+#     #by writing _class name then we can access both at any where
+# class employee(users):
+#     id=10
 
-e1=employee()
-print(e1._users__salary)
+# e1=employee()
+# print(e1._users__salary)
+
+
+
+#abstarction property---------------
+
+# from abc import ABC, abstractmethod
+# class RBIAccount(ABC):  #abstract base class
+#     @abstractmethod
+#     def interest(self):   #abstarct method = which is not implement
+#         pass
+
+#     def info(self):    #normal method as abstarct class can both abstract method and normal method
+#         print("hey")
+
+# class saving_HDFC(RBIAccount):
+#     amount=5000
+#     def interest(self):    #this implementation is necessary
+#         print("interest rate is 8%")
+
+# s1=saving_HDFC()
+# print(s1.amount)
+
+#decorators---------
+# def outerFunc():
+#     def inner_function():
+#         print("this is inner functions")
+
+    
+#     return inner_function()       
+
+# x=outerFunc()
+# print(x)
+
+''' output-this is inner functions
+None'''
+
+# def outerFunc():
+#     def inner_function():
+#         print("this is inner functions")
+
+    
+#     return inner_function          #return the memeory address of iner fucntion
+
+# x=outerFunc()
+# x()         #this will call inner function
+
+
+#clouser -----------
+
+# def outerFunc(num):
+#     print("outside functions", num)
+#     def inner_function():
+#         print("this is inner functions", num)
+    
+#     return inner_function       #return the memeory address of iner fucntion
+
+# x=outerFunc(10)
+# print(x)
+# x()         #this will call inner function
+
+
+'''output - outside functions 10
+<function outerFunc.<locals>.inner_function at 0x00000224BEEED300>
+this is inner functions 10'''
+
+
+
+# def outerFunc(num):
+#     def inner_function():
+#         print("this is inner functions", num)
+#         out = num().upper()    #will give hey by calling the test function
+#         print("inside out-", out)  
+#     return inner_function       #return the memeory address of iner fucntion
+
+# def test():
+#     return ("hey")
+
+# # x=outerFunc(test)     #will provide memoery address of test to fucntion for num
+# # x()     
+
+# test=outerFunc(test)      #inner_funtion memory return
+# test()  #inner function  
+
+'''output==this is inner functions <function test at 0x000002047290D300>
+inside out- HEY'''
+
+
+
+# def outerFunc(num):
+#     def inner_function():
+#         out = num().upper()   
+#         print("inside out-", out)  
+#     return inner_function      
+
+# @outerFunc
+# def test():
+#     return ("hey")
+   
+# test()
+
+'''output- inside out- HEY'''
+
+
+# fiabonnaci series using generator
+def func():
+    a=0
+    b=1
+    while(True):
+        yield a
+        a, b=b, a+b
+
+gen=func()
+for i in range(1, 11):
+    print(next(gen))
